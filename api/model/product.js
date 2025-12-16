@@ -1,6 +1,6 @@
-export class Product {
+class Product {
     constructor(data){
-        this.id = data.id;
+        this.id = data.id ?? 0;
         this.name = data.name;
         this.price = data.price;
         this.description = data.description;
@@ -20,4 +20,8 @@ export class Product {
             stock: this.stock
         }
     }
+}
+
+module.exports = {
+    Product
 }

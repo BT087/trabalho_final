@@ -1,9 +1,9 @@
-import { createClient } from "@supabase/supabase-js"
-import { Product } from "../model/product.js";
+const supabase = require("@supabase/supabase-js");
+const { Product } = require("../model/product.js");
 
-export class ProductDAO {
+class ProductDAO {
     constructor(url, key){
-        this.database = createClient(url, key);
+        this.database = supabase.createClient(url, key);
 
         return this;
     }
@@ -13,6 +13,10 @@ export class ProductDAO {
 
         if(error) throw error;
 
-        return data.map(r => new Product(e));
+        return data.map(r => new Product(r));
     }
+}
+
+module.exports = {
+    ProductDAO
 }

@@ -1,11 +1,11 @@
-export class Order {
+class Order {
     constructor(data){
         this.id = data.id;
         this.product = data.product;
         this.receiver = data.receiver;
         this.email = data.email;
         this.quantity = data.quantity;
-        this.status = data.status;
+        this.status = data.status ?? "Em andamento";
 
         return this;
     }
@@ -20,4 +20,8 @@ export class Order {
             status: this.status
         }
     }
+}
+
+module.exports = {
+    Order
 }

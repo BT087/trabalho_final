@@ -1,9 +1,9 @@
-import { createClient } from "@supabase/supabase-js";
-import { Order } from "../model/order.js"
+const supabase = require("@supabase/supabase-js");
+const { Order } = require("../model/order.js");
 
-export class OrderDAO {
+class OrderDAO {
     constructor(url, key){
-        this.database = createClient(url, key);
+        this.database = supabase.createClient(url, key);
 
         return this;
     }
@@ -25,4 +25,8 @@ export class OrderDAO {
 
         return new Order(data);
     }
+}
+
+module.exports = {
+    OrderDAO
 }

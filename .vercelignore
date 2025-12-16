@@ -1,3 +1,4 @@
 node_modules
 *.cmd
 .env.local
+test.js
