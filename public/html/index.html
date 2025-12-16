@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Encomenda de Produtos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Loja de Encomendas</h1>
+        <p>Faça sua encomenda de forma rápida e fácil</p>
+    </header>
+
+    <main>
+
+        <!-- LISTA DE PRODUTOS -->
+        <section class="produto">
+            <h2>Produtos Disponíveis</h2>
+
+            <div class="card">
+                <h3>Produto A</h3>
+                <p>Descrição do produto A</p>
+                <span>R$ 50,00</span>
+            </div>
+
+            <div class="card">
+                <h3>Produto B</h3>
+                <p>Descrição do produto B</p>
+                <span>R$ 80,00</span>
+            </div>
+        </section>
+
+        <!-- FORMULÁRIO DE ENCOMENDA -->
+        <section class="formulario">
+            <h2>Nova Encomenda</h2>
+
+            <form>
+                <label>Nome:</label>
+                <input name="receiver" type="text" required>
+
+                <label>Email:</label>
+                <input name="email" type="email" required>
+
+                <label>Produto:</label>
+                <select name="product" required>
+                    <option value="">Selecione</option>
+                    <option value="1">Produto A</option>
+                    <option value="2">Produto B</option>
+                </select>
+
+                <label>Quantidade:</label>
+                <input name="quantity" type="number" min="1" value="1" required>
+
+                <button type="submit">Enviar Encomenda</button>
+            </form>
+        </section>
+
+        <!-- LISTA DE ORDENS EXISTENTES -->
+        <section class="ordens">
+            <h2>Ordens Existentes</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Email</th>
+                        <th>Produto</th>
+                        <th>Quantidade</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>João Silva</td>
+                        <td>joao@email.com</td>
+                        <td>Produto A</td>
+                        <td>2</td>
+                        <td>Em processamento</td>
+                    </tr>
+                    <tr>
+                        <td>Maria Souza</td>
+                        <td>maria@email.com</td>
+                        <td>Produto B</td>
+                        <td>1</td>
+                        <td>Finalizada</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2025 - Loja de Encomendas</p>
+    </footer>
+
+</body>
+</html>

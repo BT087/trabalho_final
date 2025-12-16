@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #2c7be5;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.produto {
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.card span {
+    font-weight: bold;
+    color: #2c7be5;
+}
+
+.formulario {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, select, textarea {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #2c7be5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1a5bb8;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #ddd;
+    margin-top: 20px;
+}
+
+/* ===== LISTAGEM DE ORDENS ===== */
+.ordens {
+    margin-top: 40px;
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.ordens h2 {
+    margin-bottom: 15px;
+    color: #2c7be5;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #2c7be5;
+    color: white;
+}
+
+thead th {
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #eef4ff;
+}
+
+/* STATUS */
+td:last-child {
+    font-weight: bold;
+}
+
+/* Status específicos */
+td:last-child:contains("Finalizada") {
+    color: green;
+}
+
+/* Alternativa compatível */
+.status-finalizada {
+    color: #28a745;
+}
+
+.status-processando {
+    color: #ffc107;
+}
+
+.status-cancelada {
+    color: #dc3545;
+}
